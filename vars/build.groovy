@@ -1,34 +1,5 @@
 // jenkinsForJava.groovy
-def call(String repoUrl) {
-  pipeline {
-       agent any
-       stages {
-        stage('Compile') {
-            steps {
-                echo 'Compilation Successful'
-            }
-        }
-        
-        stage('Unit_Test') {
-            steps {
-                echo 'Testing Successful'
-            }
-        }
-        
-        stage('Qaulity Gate') {
-            steps {
-                echo 'SonarCube Quality gate Successful'
-			/* sh exit ("1"); */
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                echo 'Deployed Successful'
-            }
-        }
-    }
-    
+def call() {
     post {
         always {
             echo 'This will always run'
