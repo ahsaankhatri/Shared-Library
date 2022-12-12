@@ -1,5 +1,5 @@
 // jenkinsForJava.groovy
-def call(String repoUrl) {
+def call() {
     post {
         always {
             echo 'This will always run'
