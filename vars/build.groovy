@@ -1,6 +1,5 @@
 // jenkinsForJava.groovy
 def call() {
-    post {
         always {
             echo 'This will always run'
         }
@@ -17,5 +16,4 @@ def call() {
             echo 'This will run only if the state of the pipeline is changed'
             echo 'FOR EXAMPLE, if the pipeline was prevously failed but not it is successful'
         }
-    }
    }
